@@ -49,8 +49,8 @@ jobs:
         #更新最新版smartdns
         git clone https://github.com/pymumu/smartdns.git user/smartdns/smartdns-ba282c8
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_SRELAY=y/CONFIG_FIRMWARE_INCLUDE_SRELAY=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_NFSD=y/CONFIG_FIRMWARE_INCLUDE_NFSD=y/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_NFSC=y/CONFIG_FIRMWARE_INCLUDE_NFSC=y/g' .config
+        sed -i 's/CONFIG_FIRMWARE_INCLUDE_NFSD=y/CONFIG_FIRMWARE_INCLUDE_NFSD=n/g' .config
+        sed -i 's/CONFIG_FIRMWARE_INCLUDE_NFSC=y/CONFIG_FIRMWARE_INCLUDE_NFSC=n/g' .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=y/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n/g' .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_AUDIO=n/CONFIG_FIRMWARE_INCLUDE_AUDIO=n/g' .config
@@ -67,11 +67,11 @@ jobs:
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
         ##科学上网##
-        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #科学上网插件，选择n后全部有关插件都不集成
+        #echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #科学上网插件，选择n后全部有关插件都不集成
         #echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #集成xray执行文件 ~4.5M
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #集成v2ray执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #集成trojan执行文件 ~0.5M
-        echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> .config #simple-obfs混淆插件
+        #echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #集成v2ray执行文件
+        #echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #集成trojan执行文件 ~0.5M
+        #echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> .config #simple-obfs混淆插件
         ##科学上网##
 
         ##广告管理##
